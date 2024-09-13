@@ -1,6 +1,24 @@
 .gradle
 **/build/
 !src/**/build/
+settings.gradle
+gradlew
+gradlew/
+
+
+.idea
+out/
+*.iws
+*.iml
+*.ipr
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -19,3 +37,5 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+.bat
