@@ -10,12 +10,11 @@ public class RemoveContactTests extends TestBase{
     @BeforeMethod
     public void ensurePrecondition(){
         //precondition: user should be logged out
-        if(!isElementPresent(By.xpath("//a[contains(text(),'LOGIN')]"))){
-            click(By.xpath("//button[contains(.,'Sign Out')])"));
+        if(!isLoginLinkPresent()){
+            clickOnSignOutButton();
         }
-        click(By.xpath("//a[contains(text(),'LOGIN')]"));
-        type(By.cssSelector("[placeholder='Email']"), "test2024@gmail.com");
-        type(By.cssSelector("[placeholder='Password']"), "Test_2024$");
+        clickOnLoginLink();
+        fillLoginRegistrationForm("test2024@gmail.com", "Test_2024$");
         click(By.xpath("//button[.='Login']"));
         click(By.xpath("//a[contains(text(),'ADD')]"));
 

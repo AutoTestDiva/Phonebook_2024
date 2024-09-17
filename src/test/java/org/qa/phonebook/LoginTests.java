@@ -9,20 +9,17 @@ public class LoginTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition(){
         //precondition: user should be logged out
-        if(!isElementPresent(By.xpath("//a[contains(text(),'LOGIN')]"))){
-            click(By.xpath("//button[contains(.,'Sign Out')])"));
+        if(!isLoginLinkPresent()){
+            clickOnSignOutButton();
         }
         //click on Login Link - (By.xpath("//a[contains(text(),'LOGIN')]"))
-        click(By.xpath("//a[contains(text(),'LOGIN')]"));
+        clickOnLoginLink();
     }
 
     @Test
     public void loginPositiveTest(){
         //enter email - [placeholder='Email'] - css
-        type(By.cssSelector("[placeholder='Email']"), "test2024@gmail.com");
-
-        //enter password - [placeholder='Password'] - css
-        type(By.cssSelector("[placeholder='Password']"), "Test_2024$");
+        fillLoginRegistrationForm("test2024@gmail.com", "Test_2024$");
 
         //click on Login button
         click(By.xpath("//button[.='Login']"));

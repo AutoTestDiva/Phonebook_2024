@@ -67,4 +67,25 @@ public class TestBase {
             return true;
         }
     }
+
+    public void clickOnLoginLink() {
+        click(By.xpath("//a[contains(text(),'LOGIN')]"));
+    }
+
+    public void clickOnSignOutButton() {
+        click(By.xpath("//button[contains(.,'Sign Out')])"));
+    }
+
+    public boolean isLoginLinkPresent() {
+        return isElementPresent(By.xpath("//a[contains(text(),'LOGIN')]"));
+    }
+
+    public void clickOnRegistrationButton() {
+        click(By.xpath("//button[text()='Registration']"));
+    }
+
+    public void fillLoginRegistrationForm(String email, String password) {
+        type(By.cssSelector("[placeholder='Email']"), email);
+        type(By.cssSelector("[placeholder='Password']"), password);
+    }
 }
