@@ -1,4 +1,4 @@
-package org.qa.phonebook;
+package org.qa.phonebook.frameWork;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class ApplicationManager {
-    WebDriver driver;
+    public WebDriver driver;
     UserHelper user;
     ContactHelper contact;
     HomePageHelper homePage;

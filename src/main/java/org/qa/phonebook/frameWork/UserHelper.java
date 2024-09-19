@@ -1,7 +1,8 @@
-package org.qa.phonebook;
+package org.qa.phonebook.frameWork;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.qa.phonebook.models.User;
 
 public class UserHelper extends HelperBase{
 

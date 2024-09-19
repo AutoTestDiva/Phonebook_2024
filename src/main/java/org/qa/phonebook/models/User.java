@@ -1,4 +1,4 @@
-package org.qa.phonebook;
+package org.qa.phonebook.models;
 
 public class User {
     private  String email;

@@ -1,8 +1,9 @@
-package org.qa.phonebook;
+package org.qa.phonebook.frameWork;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.qa.phonebook.models.Contact;
 
 import java.util.List;
 

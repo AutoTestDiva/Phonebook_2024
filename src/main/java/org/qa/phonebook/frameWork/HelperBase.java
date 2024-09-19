@@ -1,4 +1,4 @@
-package org.qa.phonebook;
+package org.qa.phonebook.frameWork;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
