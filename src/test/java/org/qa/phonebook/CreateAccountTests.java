@@ -20,7 +20,6 @@ public class CreateAccountTests extends TestBase{
     public void existedUserRegistrationNegativeTest(){
         //enter email - [placeholder='Email'] - css
         fillLoginRegistrationForm("test2024@gmail.com", "Test_2024$");
-
         //click on registration button - //button[text()='Registration' - XPath
         clickOnRegistrationButton();
 
