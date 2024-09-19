@@ -8,19 +8,19 @@ public class RemoveContactTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         //precondition: user should be logged out
-        if (!isLoginLinkPresent()) {
-            clickOnSignOutButton();
+        if (!app.getUser().isLoginLinkPresent()) {
+            app.getUser().clickOnSignOutButton();
         }
-        login();
-        addContact();
+        app.getUser().login();
+        app.getContact().addContact();
     }
 
     @Test
     public void removeContactPositiveTest() {
-        int sizeBefore = sizeOfContacts();
-        removeContact();
-        pause(1000);
-        int sizeAfter = sizeOfContacts();
+        int sizeBefore = app.getContact().sizeOfContacts();
+        app.getContact().removeContact();
+        app.getContact().pause(1000);
+        int sizeAfter = app.getContact().sizeOfContacts();
         Assert.assertEquals(sizeAfter, sizeBefore - 1);
     }
 }

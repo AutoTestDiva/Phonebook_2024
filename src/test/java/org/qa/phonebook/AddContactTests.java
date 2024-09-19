@@ -9,24 +9,24 @@ public class AddContactTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition() {
         //precondition: user should be logged out
-        if (!isLoginLinkPresent()) {
-            clickOnSignOutButton();
+        if (!app.getUser().isLoginLinkPresent()) {
+            app.getUser().clickOnSignOutButton();
         }
-        login();
-        clickOnAddLink();
+        app.getUser().login();
+        app.getContact().clickOnAddLink();
     }
 
     @Test
     public void addContactPositiveTest() {
-        fillContactForm(new Contact().setName("James").setSurname("Bond").setPhone("1234567890")
+        app.getContact().fillContactForm(new Contact().setName("James").setSurname("Bond").setPhone("1234567890")
                 .setEmail("james@gmail.com").setAddress("Leipzig").setDescription("actor"));
-        clickOnSaveButton();
-        Assert.assertTrue(isContactAdded("James"));
+        app.getContact().clickOnSaveButton();
+        Assert.assertTrue(app.getContact().isContactAdded("James"));
     }
 
     @AfterMethod
     public void postCondition() {
-        removeContact();
+        app.getContact().removeContact();
     }
 
 }

@@ -8,38 +8,38 @@ public class LoginTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition(){
         //precondition: user should be logged out
-        if(!isLoginLinkPresent()){
-            clickOnSignOutButton();
+        if(!app.getUser().isLoginLinkPresent()){
+            app.getUser().clickOnSignOutButton();
         }
         //click on Login Link - (By.xpath("//a[contains(text(),'LOGIN')]"))
-        clickOnLoginLink();
+        app.getUser().clickOnLoginLink();
     }
 
     @Test
     public void loginPositiveTest(){
         //enter email - [placeholder='Email'] - css
-        fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com").setPassword("Test_2024$"));
+        app.getUser().fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com").setPassword("Test_2024$"));
         //click on Login button
-        clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
         //Assert Sign out button displayed - //button[contains(.,'Sign Out')] - XPath
-        Assert.assertTrue(isSignOutButtonPresent());
+        Assert.assertTrue(app.getUser().isSignOutButtonPresent());
     }
     @Test
     public void loginNegativeWithoutEmailTest(){
         //enter email - [placeholder='Email'] - css
-        fillLoginRegistrationForm(new User().setPassword("Test_2024$"));
+        app.getUser().fillLoginRegistrationForm(new User().setPassword("Test_2024$"));
         //click on Login button
-        clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
         //Assert Sign out button displayed - //button[contains(.,'Sign Out')] - XPath
-        Assert.assertTrue(isAlertPresent());
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
     @Test
     public void loginNegativeWithoutPasswordTest(){
         //enter email - [placeholder='Email'] - css
-        fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com"));
+        app.getUser().fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com"));
         //click on Login button
-        clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
         //Assert Sign out button displayed - //button[contains(.,'Sign Out')] - XPath
-        Assert.assertTrue(isAlertPresent());
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
 }
