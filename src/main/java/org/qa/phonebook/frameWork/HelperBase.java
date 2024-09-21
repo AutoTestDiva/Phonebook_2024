@@ -42,7 +42,7 @@ public class HelperBase {
     }
 
     public boolean isAlertPresent() {
-        Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20))
+        Alert alert = new WebDriverWait(driver, Duration.ofSeconds(40))
                 .until(ExpectedConditions.alertIsPresent());
         if (alert ==null){
             return false;

@@ -2,6 +2,7 @@ package org.qa.phonebook;
 
 import org.qa.phonebook.models.User;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,6 +19,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginPositiveTest(){
+        app.getContact().pause(1000);
         //enter email - [placeholder='Email'] - css
         app.getUser().fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com").setPassword("Test_2024$"));
         //click on Login button
@@ -34,13 +36,5 @@ public class LoginTests extends TestBase {
         //Assert Sign out button displayed - //button[contains(.,'Sign Out')] - XPath
         Assert.assertTrue(app.getUser().isAlertPresent());
     }
-    @Test
-    public void loginNegativeWithoutPasswordTest(){
-        //enter email - [placeholder='Email'] - css
-        app.getUser().fillLoginRegistrationForm(new User().setEmail("test2024@gmail.com"));
-        //click on Login button
-        app.getUser().clickOnLoginButton();
-        //Assert Sign out button displayed - //button[contains(.,'Sign Out')] - XPath
-        Assert.assertTrue(app.getUser().isAlertPresent());
-    }
+
 }

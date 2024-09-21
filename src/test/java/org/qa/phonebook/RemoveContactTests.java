@@ -23,4 +23,5 @@ public class RemoveContactTests extends TestBase {
         int sizeAfter = app.getContact().sizeOfContacts();
         Assert.assertEquals(sizeAfter, sizeBefore - 1);
     }
+
 }

@@ -1,6 +1,7 @@
 package org.qa.phonebook;
 
 import org.qa.phonebook.models.User;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,6 @@ public class CreateAccountTests extends TestBase {
         app.getUser().clickOnRegistrationButton();
 
         //Assert alert is appeared
-        // Assert.assertTrue(app.getUser().isAlertPresent());
+         Assert.assertTrue(app.getUser().isAlertPresent());
     }
 }
