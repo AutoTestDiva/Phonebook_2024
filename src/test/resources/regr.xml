@@ -4,9 +4,14 @@
     <test name="Regression">
         <classes>
             <class name="org.qa.phonebook.HomePageTest"/>
-            <class name="org.qa.phonebook.LoginTests"/>
-            <class name="org.qa.phonebook.AddContactTests"/>
+            <class name="org.qa.phonebook.LoginTests">
+                    <methods>
+                        <exclude name=".*Negative.*"/>
+                    </methods>
+                </class>
+              <class name="org.qa.phonebook.AddContactTests"/>
             <class name="org.qa.phonebook.RemoveContactTests"/>
         </classes>
     </test>
+
 </suite>

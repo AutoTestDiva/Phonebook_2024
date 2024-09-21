@@ -17,7 +17,7 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-support:4.10.0'
     implementation 'org.seleniumhq.selenium:selenium-support:4.10.0'
     implementation 'io.github.bonigarcia:webdrivermanager:5.5.1'
-
+    implementation 'ch.qos.logback:logback-classic:1.5.8'
     // Зависимость для управления WebDriver (рекомендуется использовать WebDriverManager)
     testImplementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
 
@@ -39,16 +39,23 @@ dependencies {
 test {
     useTestNG()
 }
-    task qa(type:Test){
+    task qa(type:Test) {
         useTestNG()
-        if(project.hasProperty('browser')){
-            systemProperty 'browser', "${browser}"
-        }
-        task qa1(type:Test){
-        useTestNG(){
-        suites'src/test/resources/testng.xml'}
-        }
-        if(project.hasProperty('browser')){
+        if (project.hasProperty('browser')) {
             systemProperty 'browser', "${browser}"
         }
     }
+        task qa1(type:Test) {
+            useTestNG() {
+                def suite1 = project.hasProperty("suite1")
+                def suite2 = project.hasProperty("suite2")
+                if (suite1) {
+                    suites 'src/test/resources/testng.xml'
+                } else if (suite2) {
+                    suites 'src/test/resources/regr.xml'
+                }
+            }
+            if (project.hasProperty('browser')) {
+                systemProperty 'browser', "${browser}"
+            }
+        }
