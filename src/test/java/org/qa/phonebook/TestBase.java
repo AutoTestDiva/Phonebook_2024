@@ -6,6 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.lang.reflect.Method;
+
 public class TestBase {
 
     protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", "chrome"));
@@ -23,8 +25,8 @@ public class TestBase {
 
 
     @BeforeMethod
-    public void startTest() {
-    logger.info("Start test");
+    public void startTest(Method m) {
+    logger.info("Start test " + m.getName());
     }
 
     @AfterMethod
