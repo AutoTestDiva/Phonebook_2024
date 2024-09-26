@@ -39,3 +39,7 @@ gradle-app.setting
 .classpath
 
 .bat
+
+.log
+.png
+.avi

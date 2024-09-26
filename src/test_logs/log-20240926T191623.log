@@ -1,7 +1,0 @@
-2730 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
-  C:\Users\AIT TR Student\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
-
-10288 [main] INFO  org.qa.phonebook.TestBase -- Start testloginNegativeWithoutEmailTest
-12392 [main] INFO  org.qa.phonebook.TestBase -- Stop test
-16878 [main] INFO  org.qa.phonebook.TestBase -- Start testloginPositiveTest
-19631 [main] INFO  org.qa.phonebook.TestBase -- Stop test

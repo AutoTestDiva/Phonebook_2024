@@ -1,0 +1,7 @@
+2261 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\AIT TR Student\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+9663 [main] INFO  org.qa.phonebook.TestBase -- Start test loginPositiveTest
+21954 [main] ERROR org.qa.phonebook.TestBase -- FAILD: loginPositiveTest Screenshot: D:\Phonebook_2024\screenshots\screen1727373106.png
+21954 [main] INFO  org.qa.phonebook.TestBase -- Stop test
+21954 [main] ERROR org.qa.phonebook.TestBase -- ***********************************
