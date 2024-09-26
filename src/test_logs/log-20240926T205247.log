@@ -1,0 +1,7 @@
+2187 [main] INFO  org.testng.internal.Utils -- [TestNG] Running:
+  C:\Users\AIT TR Student\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+9726 [main] INFO  org.qa.phonebook.TestBase -- Start test loginPositiveTestwithScreencast
+28029 [main] INFO  org.qa.phonebook.TestBase -- PASSED: loginPositiveTestwithScreencast
+28029 [main] INFO  org.qa.phonebook.TestBase -- Stop test
+28029 [main] ERROR org.qa.phonebook.TestBase -- ***********************************
