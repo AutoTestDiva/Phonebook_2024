@@ -41,15 +41,16 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    public void loginPositiveTestwithScreencast() throws IOException, AWTException {
+    public void loginPositiveTestWithScreencast() throws IOException, AWTException {
         app.getUser().deleteScreencast();
         app.getUser().startRecording();
-        app.getUser().fillLoginRegistrationForm(new User()
+
+        app.getUser().fillLoginRegistrationFormForScreencast(new User()
                 .setEmail("test2024@gmail.com")
                 .setPassword("Test_2024$"));
 
-        app.getUser().clickOnLoginButton();
-        app.getUser().pause(2000);
+        app.getUser().clickOnLoginButtonForScreencast();
+        app.getUser().pause(3500);
 
         app.getUser().stopRecording();
     }

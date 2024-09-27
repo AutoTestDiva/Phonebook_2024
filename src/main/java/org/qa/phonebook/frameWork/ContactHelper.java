@@ -40,8 +40,10 @@ public class ContactHelper extends HelperBase{
     }
 
     public void removeContact() {
+        pause(1000);
         click(By.cssSelector(".contact-item_card__2SOIM")); //contact-card
         click(By.xpath("//button[contains(text(),'Remove')]"));
+        pause(1000);
     }
 
     public int sizeOfContacts(){

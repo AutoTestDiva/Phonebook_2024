@@ -35,7 +35,7 @@ public class UserHelper extends HelperBase{
         type(By.cssSelector("[placeholder='Email']"), user.getEmail());
         pause(500);
         type(By.cssSelector("[placeholder='Password']"), user.getPassword());
-        pause(500);
+        pause(1500);
     }
 
 
@@ -45,6 +45,10 @@ public class UserHelper extends HelperBase{
     }
 
     public void clickOnLoginButton() {
+        click(By.xpath("//button[.='Login']"));
+    }
+    public void clickOnLoginButtonForScreencast() {
+        pause(2500);
         click(By.xpath("//button[.='Login']"));
     }
 
