@@ -88,10 +88,8 @@ public class AddContactTests extends TestBase {
         Assert.assertTrue(app.getContact().isContactAdded(name));
     }
 
-    //use CSVFile
-
     @Test(dataProvider = "newContactWithCSVFile")
-        public void addContactPositiveTestFromDataProviderWithCSV(Contact contact) {
+    public void addContactPositiveTestFromDataProviderWithCSV(Contact contact) {
         app.getContact().fillContactForm(contact);
         app.getContact().pause(1000);
         app.getContact().clickOnSaveButton();
