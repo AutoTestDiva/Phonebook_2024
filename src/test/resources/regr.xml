@@ -7,9 +7,15 @@
             <class name="org.qa.phonebook.LoginTests">
                     <methods>
                         <exclude name=".*Negative.*"/>
+                        <exclude name=".*Screencast.*"/>
                     </methods>
                 </class>
-              <class name="org.qa.phonebook.AddContactTests"/>
+              <class name="org.qa.phonebook.AddContactTests">
+                  <methods>
+                      <exclude name=".*DataProvider.*"/>
+
+                  </methods>
+              </class>
             <class name="org.qa.phonebook.RemoveContactTests"/>
         </classes>
     </test>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.qa.phonebook.RemoveContactTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-21T17:50:34" hostname="NATALI" time="1.944">
+  <properties/>
+  <testcase name="removeContactPositiveTest" classname="org.qa.phonebook.RemoveContactTests" time="1.944"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[сент. 21, 2024 7:50:22 PM org.openqa.selenium.remote.service.DriverService$Builder getLogOutput
+INFO: Driver logs no longer sent to console by default; https://www.selenium.dev/documentation/webdriver/drivers/service/#setting-log-output
+]]></system-err>
+</testsuite>

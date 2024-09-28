@@ -1,5 +1,10 @@
 .gradle
-**/build/
+build/classes/
+build/generated/
+build/reports/
+build/resources/
+build/tmp/
+
 !src/**/build/
 settings.gradle
 gradlew
